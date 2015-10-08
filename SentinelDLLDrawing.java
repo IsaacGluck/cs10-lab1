@@ -34,7 +34,7 @@ public class SentinelDLLDrawing extends Drawing {
    * @params c a shape you wish to add to the drawing
    */
   public void add(Shape s) {
-  	// YOU FILL THIS IN.
+	  shapes.addFirst(s);
   }
 
 
@@ -46,7 +46,10 @@ public class SentinelDLLDrawing extends Drawing {
    * @params page the page you wish to draw the shapes on
    */
   public void draw(Graphics page) {
-  	// YOU FILL THIS IN.
+  	shapes.getLast().draw(page);;
+  	for (Shape s = shapes.getLast(); shapes.hasCurrent(); s = shapes.previous()){
+  		s.draw(page);
+  	}
   }
 
   /**
@@ -57,7 +60,13 @@ public class SentinelDLLDrawing extends Drawing {
    * @return the front most shape or null if no shape is found
    */
   public Shape getFrontmostContainer(Point p) {
-  	// YOU FILL THIS IN.
+  	for (Shape s = shapes.getFirst(); s != null; s = shapes.next()){
+  		if (s.containsPoint(p)){
+  			return s;
+  		}
+  		else
+  			return null;
+  	}
   }
   
   /**
@@ -66,7 +75,9 @@ public class SentinelDLLDrawing extends Drawing {
    * @params s the which you wish to remove from the drawing
    */
   public void remove(Shape s) {
-  	// YOU FILL THIS IN.
+  	if (shapes.contains(s)){
+  		shapes.remove();
+  	}
   }
   
   /**
@@ -76,7 +87,8 @@ public class SentinelDLLDrawing extends Drawing {
    * @param s the shape which you wish to move to the front
    */
   public void moveToFront(Shape s) {
-  	// YOU FILL THIS IN.
+  	remove(s);
+  	shapes.addFirst(s);
   }
 
   /**
@@ -86,7 +98,8 @@ public class SentinelDLLDrawing extends Drawing {
    * @param s the shape which you wish to move to the back
    */
   public void moveToBack(Shape s) {
-  	// YOU FILL THIS IN.
+  	remove(s);
+  	shapes.addLast(s);
   }
 
   
@@ -96,6 +109,8 @@ public class SentinelDLLDrawing extends Drawing {
    * @param s the shape you wish to replace the frontmost shape with
    */
   public void replaceFront(Shape s) {
-  	// YOU FILL THIS IN.
+  	shapes.getFirst();
+  	shapes.remove();
+  	shapes.addFirst(s);
   }
 }
