@@ -13,17 +13,10 @@ public class RectCmd extends Command {
 	}
 	public void executeDrag(Point p, Drawing dwg){
 		if (rect != null)
-			dwg.remove(rect);
+			dwg.remove(rect);	
 		
-		if (p.x > initialX)
-			dWidth = initialX - p.x;
-		else
-			dWidth = p.x - initialX;
-		
-		if (p.y > initialY)
-			dHeight = initialY - p.y;
-		else
-			dHeight = p.y - initialY;
+		dWidth = Math.abs(initialX - p.x);
+		dHeight = Math.abs(initialY - p.y);
 		
 		rect = new Rect(initialX, initialY, dWidth, dHeight, dwg.getColor());
 		
