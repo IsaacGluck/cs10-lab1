@@ -7,11 +7,13 @@ import java.awt.*;
  * Written by THC for CS 10 Lab Assignment 1.
  *
  * @author Tom Cormen
- * @author YOU
+ * @author Maxwell Coleman, Isaac Gluck
+ * collaborated with Anish Chadalavada
  * @see Shape
  */
 public class Rect extends Shape {
 	private int x, y, width, height;
+	private Color rectColor;
 
 
 	/**
@@ -28,6 +30,7 @@ public class Rect extends Shape {
 		this.y = y;
 		this.width = width;
 		this.height = height;
+		
 	}
 
 	/**
@@ -36,6 +39,7 @@ public class Rect extends Shape {
 	 * @param page the page you wish to draw on
 	 */
 	public void drawShape(Graphics page){
+		page.setColor(rectColor);
 		page.fillRect(x, y, width, height);
 	}
 

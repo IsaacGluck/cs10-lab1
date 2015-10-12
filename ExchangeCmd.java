@@ -7,6 +7,7 @@ import java.awt.*;
  * Written by THC for CS 10 Lab Assignment 1.
  * 
  * @author Tom Cormen
+ * @author Maxwell Coleman, Isaac Gluck
  * @see Command
  */
 public class ExchangeCmd extends Command {

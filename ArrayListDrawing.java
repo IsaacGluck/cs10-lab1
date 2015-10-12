@@ -16,11 +16,6 @@ import java.awt.*;
 public class ArrayListDrawing extends Drawing {
   private ArrayList<Shape> shapes;    // the ordered list of Shape objects
 
-  public ArrayList<Shape> getShapes(){ // for testing
-	  return shapes;
-  }
-  
-  
   /**
    * Constructor creates an empty list of Shape objects and 
    * saves the default color.

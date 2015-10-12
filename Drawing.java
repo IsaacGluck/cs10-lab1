@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
-import java.util.ArrayList;
 
 /**
  * Drawing.java
@@ -13,6 +12,9 @@ import java.util.ArrayList;
  * defined in a subclass.
  * 
  * Written by THC for CS 10 Lab Assignment 1.
+ * 
+ * @author Maxwell Coleman, Isaac Gluck
+ * collaborated with Anish Chadalavada
  * 
  * @author Tom Cormen
  */
@@ -101,6 +103,4 @@ public abstract class Drawing {
    * @param s the shape you wish to replace the frontmost shape with
    */
   public abstract void replaceFront(Shape s);
-  
-  public abstract ArrayList<Shape> getShapes(); // for testing
 }

@@ -7,7 +7,8 @@ import java.awt.*;
  * Written by THC for CS 10 Lab Assignment 1.
  *
  * @author Tom Cormen
- * @author YOU
+ * @author Maxwell Coleman, Isaac Gluck
+ * collaborated with Anish Chadalavada
  * @see Shape
  */
 public class Segment extends Shape {

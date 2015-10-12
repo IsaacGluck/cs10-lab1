@@ -5,7 +5,8 @@ import java.awt.*;
  * Class for an ellipse.
  * 
  * @author Tom Cormen
- * @author YOU
+ * @author Maxwell Coleman, Isaac Gluck
+ * collaborated with Anish Chadalavada
  * @see Shape
  */
 public class Ellipse extends Shape {
