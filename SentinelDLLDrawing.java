@@ -47,6 +47,7 @@ public class SentinelDLLDrawing extends Drawing {
    * @params page the page you wish to draw the shapes on
    */
   public void draw(Graphics page) {
+  	shapes.getLast().draw(page);;
   	for (Shape s = shapes.getLast(); shapes.hasCurrent(); s = shapes.previous()){
   		s.draw(page);
   	}
@@ -69,8 +70,6 @@ public class SentinelDLLDrawing extends Drawing {
   		
   	}
   	return null;
-  	
-	
   }
   
   /**

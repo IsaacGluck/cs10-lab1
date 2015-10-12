@@ -29,8 +29,7 @@ public class RectCmd extends Command {
 		dHeight = Math.abs(p.y - originalPoint.y);
 
 		rect = new Rect(Math.min(originalPoint.x, p.x), Math.min(originalPoint.y, p.y),
-				dWidth, dHeight, dwg.getColor()); // Choose the correct top left corner to draw from
-		
+				dWidth, dHeight, dwg.getColor()); // Choose the correct top left corner to draw from		
 		dwg.add(rect);
 	}
 	
